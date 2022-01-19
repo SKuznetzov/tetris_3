@@ -1,3 +1,6 @@
 :root {
     font-size: 0.625em;
 }
+* {
+    box-sizing: border-box;
+  }
