@@ -18,3 +18,9 @@ body {
       rgba(94, 191, 178, 1) 100%
     );
   }
+
+  .grid {
+      width: 200px;
+      height: 400px;
+      background-color: red;
+  }
