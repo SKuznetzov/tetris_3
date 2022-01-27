@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
   function draw() {
-    currentPosition.forEach(index => {
+    current.forEach(index => {
       squares[currentPosition + index].classList.add('tetromino')
     })
   }

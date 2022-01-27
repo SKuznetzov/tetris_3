@@ -24,7 +24,7 @@ body {
       height: 400px;
       display: flex;
       flex-wrap: wrap;
-      background-color: red;
+      background-color: yellow;
   }
    
   .grid div {
@@ -33,5 +33,5 @@ body {
   }
   
   .tetromino {
-      background-color: yellow;
+      background-color: blue;
   }
