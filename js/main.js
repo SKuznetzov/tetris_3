@@ -46,8 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentRotation = 0
   
   let random = Math.floor(Math.random()*theTetrominoes.length)
-  console.log(random)
-  let current = theTetrominoes[random][0]
+  let current = theTetrominoes[random][currentRotation]
   
 
   function draw() {
