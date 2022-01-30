@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const ScoreDisplay = document.querySelector('#score')
   const StartBtn = document.querySelector('#start-button')
   const width = 10
+  let nextRandom = 0
    
   const lTetromino = [
       [1,width+1,width*2+1, 2],
@@ -85,11 +86,12 @@ document.addEventListener('DOMContentLoaded', () => {
   function freeze() {
     if (current.some(index => squares[currentPosition + index + width].classList.contains('token'))) {
       current.forEach(index => squares[currentPosition + index].classList.add('token'))
-
-      random = Math.floor(Math.random() * theTetrominoes.length)
+      random = nextRandom
+      nextRandom = Math.floor(Math.random() * theTetrominoes.length)
       current = theTetrominoes[random][currentRotation]
       currentPosition = 4
       draw()
+      displayShape()
    }
  }
 
@@ -139,7 +141,9 @@ document.addEventListener('DOMContentLoaded', () => {
     displaySquares.forEach(square => {
       square.classList.remove('tetromino')
     })
-    upNextTetrominoes[nextRandom]
+    upNextTetrominoes[nextRandom].forEach( index => {
+      displaySquares[displayIndex + index].classList.add('tetromino')
+    })
   }
 
 
