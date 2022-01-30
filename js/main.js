@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     current = theTetrominoes[random][currentRotation]
     draw()
   }
-  // 1-04-50
+ 
 
 
 
