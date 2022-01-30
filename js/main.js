@@ -62,6 +62,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   timerId = setInterval(moveDown,1000)
+
+  function control(e) {
+    if(e.keyCode === 37) {
+      moveLeft()
+    } else if (e.keyCode === 38) {
+      // rotate()
+    } else if (e.keyCode === 39) {
+      // moveRight()
+    } else if (e.keyCode === 40) {
+      // moveDown()
+    }
+  }
+  document.addEventListener('keyup',control)
   function moveDown() {
     undraw()
     currentPosition += width
@@ -84,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     undraw()
     const isAtLeftEdge = current.some(index => (currentPosition + index) % width ===0)
     if(!isAtLeftEdge) currentPosition -=1
-    if(currentsome(index => squares[currentPosition + index].classList.contains('token'))) {
+    if(current.some(index => squares[currentPosition + index].classList.contains('token'))) {
       currentPosition +=1
     }
     draw()
