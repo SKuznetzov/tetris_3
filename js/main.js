@@ -80,7 +80,18 @@ document.addEventListener('DOMContentLoaded', () => {
    }
  }
 
-}
+  function moveLeft() {
+    undraw()
+    const isAtLeftEdge = current.some(index => (currentPosition + index) % width ===0)
+    if(!isAtLeftEdge) currentPosition -=1
+    if(currentsome(index => squares[currentPosition + index].classList.contains('token'))) {
+      currentPosition +=1
+    }
+    draw()
+  }
 
 
-)
+
+
+
+})
