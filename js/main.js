@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
       draw()
       displayShape()
       addScore()
+      gameOver()
    }
  }
 
@@ -176,6 +177,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  function gameOver() {
+    if(current.some(index => squares[currentPosition + index].classList.contains('token'))) {
+      scoreDisplay.innerHTML = 'end'
+      clearInterval(timerId)
+    }
+  }
 
 
 
