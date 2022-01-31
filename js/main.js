@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (e.keyCode === 39) {
       moveRight()
     } else if (e.keyCode === 40) {
-      // moveDown()
+      moveDown()
     }
   }
   document.addEventListener('keyup',control)
