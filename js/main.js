@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const startBtn = document.querySelector('#start-button')
   const width = 10
   let nextRandom = 0
-  let timeId
+  let timerId
    
   const lTetromino = [
       [1,width+1,width*2+1, 2],
@@ -147,8 +147,16 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  startBtn.add('click', () => {
-
+  startBtn.addEventListener('click', () => {
+    if (timerId) {
+      clearInterval(timerId)
+      timerId = null
+    } else {
+      draw()
+      timerId = setInterval(moveDown, 1000)
+      nextRandom = Math.floor(Math.random()*theTetrominoes.length)
+      displayShape()
+    }
   })
 
 
