@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keyup',control)
   function moveDown() {
     undraw()
-    currentPosition += width
+    currentPosition = currentPosition += width
     draw()
     freeze()
   }
@@ -183,8 +183,4 @@ document.addEventListener('DOMContentLoaded', () => {
       clearInterval(timerId)
     }
   }
-
-
-
-
 })
